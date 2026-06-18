@@ -7,8 +7,8 @@
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- Babel for in-browser JSX compilation -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Babel for in-browser JSX compilation (Updated to stable CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -30,7 +30,8 @@
 <body class="bg-[#0f172a] text-slate-200 font-sans selection:bg-emerald-500/30">
     <div id="root"></div>
 
-    <script type="text/babel">
+    <!-- Added data-type="module" and data-presets="react" to prevent import errors -->
+    <script type="text/babel" data-type="module" data-presets="react">
         const { useState, useEffect } = React;
 
         // --- DATA ---
